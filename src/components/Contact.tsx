@@ -2,6 +2,7 @@ import { Box, Button, TextField, Typography } from "@mui/material";
 import ContentHeading from "./ContentHeading";
 import { ChangeEvent, FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import LoadingButton from "@mui/lab/LoadingButton";
 
 interface Field {
 	name: string;
@@ -18,6 +19,7 @@ function Contact() {
 		message: "",
 	});
 
+	const [isLoading, setIsLoading] = useState<boolean>(false);
 	const form = useRef<HTMLFormElement | string>("");
 
 	const sendEmail = (e: FormEvent<HTMLFormElement>) => {
@@ -26,7 +28,7 @@ function Contact() {
 		const service_id = import.meta.env.VITE_SERVICE_ID;
 		const template_id = import.meta.env.VITE_TEMPLATE_ID;
 		const public_id = import.meta.env.VITE_PUBLIC_KEY;
-		console.log("service", service_id);
+		setIsLoading(true);
 
 		emailjs
 			.sendForm(service_id, template_id, form.current, {
@@ -35,6 +37,7 @@ function Contact() {
 			.then(
 				() => {
 					console.log("SUCCESS!");
+					setIsLoading(false); // Set loading to false
 				},
 				(error) => {
 					console.log("FAILED...", error.text);
@@ -110,7 +113,9 @@ function Contact() {
 						variant="filled"
 						required={true}
 					/>
+
 					<Button
+						disabled={isLoading ? true : false}
 						sx={{
 							display: "inline-block",
 							fontSize: "1.4rem",
@@ -127,7 +132,11 @@ function Contact() {
 						}}
 						type="submit"
 					>
-						Send
+						{isLoading ? (
+							<LoadingButton loading>Submit</LoadingButton>
+						) : (
+							"Send Message"
+						)}
 					</Button>
 				</Box>
 			</Box>

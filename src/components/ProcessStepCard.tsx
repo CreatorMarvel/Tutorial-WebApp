@@ -21,11 +21,7 @@ function ProcessStepCard({ title, content, icon }: ProcessCardProps) {
 					xs: "100%",
 				},
 				height: {
-					md: "260px",
-				},
-				cursor: "pointer",
-				"&:hover": {
-					transform: "translateY(-6px)",
+					md: "300px",
 				},
 			}}
 		>
@@ -48,7 +44,7 @@ function ProcessStepCard({ title, content, icon }: ProcessCardProps) {
 				component="h1"
 				sx={{
 					lineHeight: 1.5,
-					fontSize: "1.4rem",
+					fontSize: "1.6rem",
 					color: "var(--light-gray)",
 				}}
 			>

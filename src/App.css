@@ -10,9 +10,9 @@
 */
 
 :root {
-	--primary-blue-800: #488fde;
+	--primary-blue-800: #4c61bd;
 	--blue-shade: #4181c8;
-	--white: hsl(0, 0%, 98%);
+	--white: #fafafa;
 	--light-gray: hsl(0, 0%, 41%);
 }
 

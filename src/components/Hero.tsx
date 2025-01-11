@@ -14,7 +14,7 @@ function Hero() {
 				},
 				alignItems: "center",
 				gap: "8rem",
-				padding: "2.4rem",
+				padding: "9.6rem 2.4rem",
 				backgroundImage: "url('/images/Untitled.png')",
 				backgroundSize: "cover",
 			}}
@@ -33,7 +33,7 @@ function Hero() {
 						letterSpacing: "-0.5px",
 					}}
 				>
-					Best tutoring service local
+					Your local Tutoring Solution
 				</Typography>
 				<Typography
 					variant="h4"
@@ -44,9 +44,10 @@ function Hero() {
 						color: "var(--light-gray)",
 					}}
 				>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium,
-					corporis? Enim facilis sequi ipsum voluptate at sunt vitae quia illo?
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, ad.
+					I offer personalized tutoring in math and science, helping you master
+					concepts and boost your confidence. Whether it's exam prep or
+					overcoming challenges, let's work together to reach your academic
+					goals!
 				</Typography>
 				<Link
 					href="#"
@@ -56,16 +57,16 @@ function Hero() {
 						backgroundColor: "var(--primary-blue-800)",
 						color: "var(--white)",
 						padding: "1.8rem 2.4rem",
-						borderRadius: "50px",
+						borderRadius: "10px",
 						fontWeight: 600,
 						textDecoration: "none",
-						boxShadow: "0 0 24px rgba(0, 0, 0, 0.2)",
+						boxShadow: "0 0 24px rgba(0, 0, 0, 0.1)",
 						"&:hover": {
 							backgroundColor: "var(--blue-shade)",
 						},
 					}}
 				>
-					Contact Me
+					Start Learning
 				</Link>
 			</Box>
 			<Box>
@@ -79,7 +80,7 @@ function Hero() {
 						objectFit: "cover",
 						borderRadius: "5px",
 					}}
-					src="public/images/premium_photo-1683195783423-f7b69d845bdf.avif"
+					src="/images/premium_photo-1683195783423-f7b69d845bdf.avif"
 					alt="Hero landing page"
 				/>
 			</Box>

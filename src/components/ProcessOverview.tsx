@@ -11,7 +11,7 @@ interface ProcessProps {
 	content: string;
 }
 
-const iconStyle = { width: "60px", height: "60px" };
+const iconStyle = { width: "80px", height: "80px" };
 
 const processes: ProcessProps[] = [
 	{
