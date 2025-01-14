@@ -24,7 +24,7 @@ const processes: ProcessProps[] = [
 		icon: <LocalLibraryIcon fontSize="small" sx={iconStyle} />,
 		title: "Subjects",
 		content:
-			"We offer expert tutoring in Mathematics, Physics, and Life Sciences for Grade 10 and 11 students to help them succeed",
+			"We offer expert tutoring in Mathematics, Physics, and Life Sciences for Grade 10, 11 and 12 students to help them succeed",
 	},
 	{
 		icon: <AttachMoneyIcon fontSize="small" sx={iconStyle} />,
