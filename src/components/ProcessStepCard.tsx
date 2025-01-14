@@ -11,11 +11,10 @@ function ProcessStepCard({ title, content, icon }: ProcessCardProps) {
 	return (
 		<Box
 			sx={{
-				gap: "2.4rem",
 				padding: "2.4rem",
 				backgroundColor: "var(--white)",
-				boxShadow: "0 0 24px rgba(0, 0, 0, 0.08)",
-				borderRadius: "5px",
+				boxShadow: "0 0 24px rgba(0, 0, 0, 0.05)",
+				borderRadius: "18px",
 				width: {
 					md: "300px",
 					xs: "100%",

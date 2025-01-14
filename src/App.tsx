@@ -1,8 +1,8 @@
 import "./App.css";
 import AboutMe from "./components/AboutMe";
+import ResponsiveAppBar from "./components/AppBar";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ProcessOverview from "./components/ProcessOverview";
 import Testimonial from "./components/Testimonial";
@@ -10,7 +10,7 @@ import Testimonial from "./components/Testimonial";
 function App() {
 	return (
 		<>
-			<Header />
+			<ResponsiveAppBar />
 			<Hero />
 			<ProcessOverview />
 			<AboutMe />

@@ -1,9 +1,9 @@
-import GetInTouch from "./GetInTouch";
+import Navigation from "./Navigation";
 
 function Header() {
 	return (
 		<header>
-			<GetInTouch />
+			<Navigation />
 		</header>
 	);
 }

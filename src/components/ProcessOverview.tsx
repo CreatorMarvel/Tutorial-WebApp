@@ -11,7 +11,7 @@ interface ProcessProps {
 	content: string;
 }
 
-const iconStyle = { width: "80px", height: "80px" };
+const iconStyle = { width: "60px", height: "60px" };
 
 const processes: ProcessProps[] = [
 	{
@@ -24,7 +24,7 @@ const processes: ProcessProps[] = [
 		icon: <LocalLibraryIcon fontSize="small" sx={iconStyle} />,
 		title: "Subjects",
 		content:
-			"We offer tutoring in Mathematics, Physics, and Life Science, providing expert guidance to help you master each subject and excel in your studies.",
+			"We offer expert tutoring in Mathematics, Physics, and Life Sciences for Grade 10 and 11 students to help them succeed",
 	},
 	{
 		icon: <AttachMoneyIcon fontSize="small" sx={iconStyle} />,

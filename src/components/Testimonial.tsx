@@ -32,18 +32,18 @@ function Testimonial() {
 				}}
 			>
 				<blockquote>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-					doloremque at atque. Harum laudantium at excepturi porro. Voluptate,
-					eum perspiciatis?
+					This tutoring service has helped my child improve academically and
+					build confidence. The tutors are caring and skilled, making a
+					noticeable difference in their performance
 				</blockquote>
 			</Typography>
-			<Avatar
+			{/* <Avatar
 				alt="Remy Sharp"
 				src="/images/about.avif"
 				sx={{ width: 56, height: 56, marginBottom: "1.6rem" }}
-			/>
+			/> */}
 			<Typography variant="h4" sx={{ fontWeight: 800 }}>
-				&#8208; Remy Sharp
+				&#8208; Sarah M
 			</Typography>
 		</Box>
 	);

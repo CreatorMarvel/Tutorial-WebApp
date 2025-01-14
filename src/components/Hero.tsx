@@ -50,7 +50,7 @@ function Hero() {
 					goals!
 				</Typography>
 				<Link
-					href="#"
+					href="#contact"
 					sx={{
 						display: "inline-block",
 						fontSize: "1.4rem",

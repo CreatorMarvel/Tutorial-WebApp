@@ -1,8 +1,9 @@
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 import ContentHeading from "./ContentHeading";
-import { ChangeEvent, FormEvent, useRef, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import LoadingButton from "@mui/lab/LoadingButton";
+import SuccessAlert from "./SuccessAlert";
 
 interface Field {
 	name: string;
@@ -18,6 +19,9 @@ function Contact() {
 		phone: "",
 		message: "",
 	});
+
+	const [msgSent, setMsgSent] = useState<boolean>(false);
+	const [showSuccess, setShowSuccess] = useState(false);
 
 	const [isLoading, setIsLoading] = useState<boolean>(false);
 	const form = useRef<HTMLFormElement | string>("");
@@ -38,12 +42,23 @@ function Contact() {
 				() => {
 					console.log("SUCCESS!");
 					setIsLoading(false); // Set loading to false
+					setMsgSent(true);
 				},
 				(error) => {
 					console.log("FAILED...", error.text);
 				}
 			);
 	};
+
+	useEffect(() => {
+		if (msgSent) {
+			setTimeout(() => {
+				setShowSuccess((showSuccess) => !showSuccess); // Show the success alert after 3 seconds
+			}, 3000);
+			setMsgSent(false); // Reset msgSent to false to avoid rerunning the effect
+			setShowSuccess((showSuccess) => !showSuccess);
+		}
+	}, [msgSent, showSuccess]);
 
 	function handleChange(e: ChangeEvent<HTMLInputElement>) {
 		const { name, value } = e.target;
@@ -65,9 +80,9 @@ function Contact() {
 				},
 			}}
 		>
-			<Box>
+			<div id="contact">
+				{showSuccess && <SuccessAlert />}
 				<ContentHeading content="Contact Me" />
-				<Typography variant="h4" sx={{ marginBottom: "1.2rem" }}></Typography>
 				<Box
 					ref={form}
 					onSubmit={sendEmail}
@@ -139,8 +154,7 @@ function Contact() {
 						)}
 					</Button>
 				</Box>
-			</Box>
-			<Box></Box>
+			</div>
 		</Box>
 	);
 }
