@@ -67,7 +67,7 @@ function AboutMe() {
 					fuel my passion for learning
 					<br />
 				</Typography>
-				<Socials />
+				{/* <Socials /> */}
 			</Box>
 		</Box>
 	);
